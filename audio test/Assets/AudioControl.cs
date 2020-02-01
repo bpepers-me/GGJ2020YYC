@@ -37,7 +37,7 @@ public class AudioControl : MonoBehaviour
             pitch = 1.0f / (-pitchSlider.value + 1.0f);
         }
 
-        return pitch;
+        return pitch / GetTempo();
     }
 
     public void UpdateAudio()
