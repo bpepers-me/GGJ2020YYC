@@ -6,17 +6,11 @@ using UnityEngine.Audio;
 
 public class AudioControl : MonoBehaviour
 {
-    public AudioSource audio1;
     public AudioMixer audioMixer;
     public Slider pitchSlider;
     public Slider tempoSlider;
 
-    public void PitchChanged()
-    {
-        // TODO: use audio mixer to set the pitch
-    }
-
-    public void TempoChanged()
+    private float GetTempo()
     {
         float tempo;
         if (tempoSlider.value >= 0.0f)
@@ -28,7 +22,37 @@ public class AudioControl : MonoBehaviour
             tempo = 1.0f / (-tempoSlider.value + 1.0f);
         }
 
-        audioMixer.SetFloat("masterTempo", tempo);
-        audioMixer.SetFloat("masterPitch", 1.0f / tempo);
+        return tempo;
+    }
+
+    private float GetPitch()
+    {
+        float pitch;
+        if (pitchSlider.value >= 0.0f)
+        {
+            pitch = pitchSlider.value + 1.0f;
+        }
+        else
+        {
+            pitch = 1.0f / (-pitchSlider.value + 1.0f);
+        }
+
+        return pitch;
+    }
+
+    public void UpdateAudio()
+    {
+        audioMixer.SetFloat("masterTempo", GetTempo());
+        audioMixer.SetFloat("masterPitch", GetPitch());
+    }
+
+    public void PitchChanged()
+    {
+        UpdateAudio();
+    }
+
+    public void TempoChanged()
+    {
+        UpdateAudio();
     }
 }

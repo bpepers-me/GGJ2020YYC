@@ -296,7 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa33c299ff32d14b99dc5df81e0a45a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio1: {fileID: 519420030}
   audioMixer: {fileID: 24100000, guid: 0fed2bba351b10d4f9326c7503c18b18, type: 2}
   pitchSlider: {fileID: 1881964175}
   tempoSlider: {fileID: 902174926}
@@ -1206,8 +1205,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 356319460}
   m_HandleRect: {fileID: 1046284030}
   m_Direction: 0
-  m_MinValue: -100
-  m_MaxValue: 100
+  m_MinValue: -3
+  m_MaxValue: 3
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
