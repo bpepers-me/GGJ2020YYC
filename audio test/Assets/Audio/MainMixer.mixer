@@ -6,7 +6,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewAudioMixer
+  m_Name: MainMixer
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -15,7 +15,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 4b2958ab8d95d1e40a7986b581e5657f
+    name: masterTempo
+  - guid: 03005172ad95b79499abce3b18a4f4c8
+    name: masterPitch
   m_AudioMixerGroupViews:
   - guids:
     - 43447566bcd8b704e9bb1bf3ca830281
@@ -66,7 +70,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 25bfac4fffc23a549b37d07a324c67de
   m_FloatValues:
-    03005172ad95b79499abce3b18a4f4c8: 1.38
+    03005172ad95b79499abce3b18a4f4c8: 1
     f09655e929280b24580d01d7c24787e7: -1.2918884
     4b2958ab8d95d1e40a7986b581e5657f: 1
   m_TransitionOverrides: {}
