@@ -2446,9 +2446,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723bd675262fdcc4186573dff60e44f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source1: {fileID: 1712299234}
-  source2: {fileID: 356943940}
-  source3: {fileID: 1394783447}
+  sources:
+  - {fileID: 1712299234}
+  - {fileID: 356943940}
+  - {fileID: 1394783447}
 --- !u!114 &377428631
 MonoBehaviour:
   m_ObjectHideFlags: 0
