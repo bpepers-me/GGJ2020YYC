@@ -6763,6 +6763,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3211581795575637875, guid: 59064a11f26d7469da796d745d9a7504,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 5720993b21bfc4ba396acdde40a71103,
+        type: 3}
     - target: {fileID: 3211581795575637878, guid: 59064a11f26d7469da796d745d9a7504,
         type: 3}
       propertyPath: m_LocalPosition.x
