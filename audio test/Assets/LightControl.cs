@@ -25,7 +25,7 @@ public class LightControl : MonoBehaviour
         int sliderSum = 0;
         foreach(Slider i in sliders)
         {
-            if(Mathf.Abs(i.value)<=4)
+            if (Mathf.Abs(i.value) <= 2)
             {
                 sliderSum++;
             }
