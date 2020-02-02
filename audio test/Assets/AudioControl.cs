@@ -9,7 +9,8 @@ public class AudioControl : MonoBehaviour
     //public AudioMixer audioMixer;
     public Slider slider;
     public AudioSource audioSource;
-    
+    public bool isFixed;
+
     //public Slider pitchSlider;
     //public Slider tempoSlider;
 
@@ -21,9 +22,15 @@ public class AudioControl : MonoBehaviour
         int magicNumber = Random.Range(minValue, maxValue);
         slider.minValue = magicNumber - halfLength;
         slider.maxValue = magicNumber + halfLength;
-        Debug.Log("Min = " + minValue + ", Max = " + maxValue + ", magic = " + magicNumber);
-        Debug.Log("Slider min = " + slider.minValue + ", slider max = " + slider.maxValue);
-        slider.onValueChanged.AddListener (delegate {SliderUpdated ();});
+        if (!isFixed) {
+            slider.value = slider.minValue + halfLength;
+            SliderUpdated();
+            Debug.Log("Min = " + minValue + ", Max = " + maxValue + ", magic = " + magicNumber);
+            Debug.Log("Slider min = " + slider.minValue + ", slider max = " + slider.maxValue);
+            slider.onValueChanged.AddListener (delegate {SliderUpdated ();});
+        } else {
+            slider.enabled = false;
+        }
     }
 
     public void SliderUpdated() {
