@@ -33,9 +33,9 @@ public class LightControl : MonoBehaviour
 
         for (int i = 0; i < lamps.Length; i++) {
             if (i < sliderSum) {
-                lamps[i].enabled = true;
+                lamps[i].interactable = true;
             } else {
-                lamps[i].enabled = false;
+                lamps[i].interactable = false;
             }
         }
     }
