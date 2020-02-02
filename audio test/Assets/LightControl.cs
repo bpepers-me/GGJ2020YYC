@@ -7,16 +7,15 @@ public class LightControl : MonoBehaviour
 {
     public Slider[] sliders;
     public Button[] lamps;
-    public Text textBlock;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
+        SetLamps();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLamps()
     {
-        float sliderSum = 0;
+        int sliderSum = 0;
         foreach(Slider i in sliders)
         {
             if(Mathf.Abs(i.value)<=4)
@@ -32,7 +31,5 @@ public class LightControl : MonoBehaviour
                 lamps[i].enabled = false;
             }
         }
-
     }
 }
-
