@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LightControl : MonoBehaviour
 {
     public Slider[] sliders;
-    public Image lamp;
+    public Button[] lamps;
     public Text textBlock;
     // Start is called before the first frame update
     void Start()
@@ -21,13 +21,16 @@ public class LightControl : MonoBehaviour
         {
             if(Mathf.Abs(i.value)<=4)
             {
-            sliderSum ++;
+                sliderSum++;
             }
         }
 
-        if (sliderSum>=sliders.Length)
-        {
-            lamp.color = Color.green;
+        for (int i = 0; i < lamps.Length; i++) {
+            if (i < sliderSum) {
+                lamps[i].enabled = true;
+            } else {
+                lamps[i].enabled = false;
+            }
         }
 
     }
