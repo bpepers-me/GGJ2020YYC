@@ -37,7 +37,7 @@ public class AudioControl : MonoBehaviour
         Debug.Log("Min = " + slider.minValue + ", Max = " + slider.maxValue);
         Debug.Log(slider.value);
 
-        audioSource.pitch = SliderToPitch(slider.value);
+        audioSource.pitch = SliderToPitch(Mathf.Round(slider.value / 4.0f) * 4.0f);
         Debug.Log(SliderToPitch(slider.value));
     }
 
