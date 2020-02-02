@@ -10,6 +10,13 @@ public class LightControl : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(ExecuteAfterTime(.25f));
+    }
+
+    private IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+
         SetLamps();
     }
 
