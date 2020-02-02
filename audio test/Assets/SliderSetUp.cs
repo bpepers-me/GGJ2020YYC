@@ -1,11 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SliderSetUp : MonoBehaviour
 {
+
+
+    public Slider videoSlider;
     // Start is called before the first frame update
     void Start()
+    {
+       
+        
+    }
+
+    void OnAwake()
     {
         
     }
@@ -15,4 +25,9 @@ public class SliderSetUp : MonoBehaviour
     {
         
     }
+
+    public float GetSliderValue()
+        {
+            return videoSlider.value;
+        }
 }
