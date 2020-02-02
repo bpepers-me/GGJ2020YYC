@@ -7,10 +7,12 @@ public class LightControl : MonoBehaviour
 {
     public Slider[] sliders;
     public Button[] lamps;
+    public bool success;
 
     private void Start()
     {
         StartCoroutine(ExecuteAfterTime(.25f));
+        success = false;
     }
 
     private IEnumerator ExecuteAfterTime(float time)
@@ -37,6 +39,13 @@ public class LightControl : MonoBehaviour
             } else {
                 lamps[i].interactable = false;
             }
+        }
+
+        if (sliderSum >= lamps.Length) {
+            Debug.Log("Success!");
+            success = true;
+        } else {
+            success = false;
         }
     }
 }
