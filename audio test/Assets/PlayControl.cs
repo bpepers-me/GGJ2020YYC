@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayControl : MonoBehaviour
 {
-    public AudioSource source1;
-    public AudioSource source2;
-    public AudioSource source3;
+    public AudioSource[] sources;
 
     public void RestartAudio()
     {
@@ -16,15 +14,17 @@ public class PlayControl : MonoBehaviour
 
     public void StopAudio()
     {
-        source1.Stop();
-        source2.Stop();
-        source3.Stop();
+        foreach (var source in sources)
+        {
+            source.Stop();
+        }
     }
 
     public void PlayAudio()
     {
-        source1.Play();
-        source2.Play();
-        source3.Play();
+        foreach (var source in sources)
+        {
+            source.Play();
+        }
     }
 }
