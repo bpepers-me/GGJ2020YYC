@@ -573,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &98578889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f80c5639c9b8043ac16cb3f69a61b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Scenes/Level 3
+  LevelName: Scenes/EndScene
 --- !u!114 &98578891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6175,7 +6175,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.3800535
+  orthographic size: 14.999999
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -7242,7 +7242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next Repair
+  m_Text: Celebrate!
 --- !u!222 &1287892561
 CanvasRenderer:
   m_ObjectHideFlags: 0

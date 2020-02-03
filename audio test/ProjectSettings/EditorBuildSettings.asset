@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AudioTest.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StartScene.unity
+    guid: c96de60635f4ef948b1b52e81759677a
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 5da4b97b0aa577a4ebdfa7e659a79ca0
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 6e70e86f1f353ff4cadd4f5a1b29192a
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 5aa58d929fffc56448e56e6cc36ac740
   m_configObjects: {}
